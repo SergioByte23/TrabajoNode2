@@ -40,7 +40,7 @@ const update = catchError(async(req, res) => {
         last_name: last_name,
         email: email,
         password: password,
-        birthday:birthday,
+        birthday:birthday
     }, { where: { id: id }, returning: true });
     return res.json(user);
 });
@@ -50,5 +50,5 @@ module.exports = {
     create,
     getOne,
     remove,
-    update,
+    update
 }
