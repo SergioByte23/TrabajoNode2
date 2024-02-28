@@ -29,6 +29,7 @@ const getOne = catchError(async(req, res) => {
 const remove = catchError(async(req, res) => {
     const { id } = req.params;
     await User.destroy({ where: { id: id } });
+    return res.sendStatus(204);
 });
 
 const update = catchError(async(req, res) => {
